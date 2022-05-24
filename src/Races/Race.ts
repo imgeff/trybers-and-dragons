@@ -1,7 +1,7 @@
 export default abstract class Race {
   public readonly name: string;
   public readonly dexterity: number;
-  private _maxLifePoints: number;
+  protected _maxLifePoints: number;
 
   constructor(name: string, dexterity: number) {
     this.name = name;
