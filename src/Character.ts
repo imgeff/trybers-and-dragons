@@ -67,15 +67,16 @@ export default class Character implements Fighter {
   }
 
   attack(enemy: Fighter | SimpleFighter): void {
+    if (this.lifePoints === -1) return;
     enemy.receiveDamage(this._strength);
   }
 
   special(enemy: Fighter): void {
     if (this._lifePoints <= 5) {
-      enemy.receiveDamage(getRandomInt(1, 100));
+      this._lifePoints = getRandomInt(1, 50);
       return;
     }
-    if (enemy.strength > 50) {
+    if (enemy.strength > 30) {
       this._lifePoints = getRandomInt(1, 100);
     }
   }
