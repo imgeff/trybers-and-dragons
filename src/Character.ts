@@ -4,6 +4,9 @@ import Fighter, { SimpleFighter } from './Fighter';
 import Race, { Elf } from './Races';
 import getRandomInt from './utils';
 
+const defaultElf = new Elf('Lúthien', 22);
+const defaultMage = new Mage('Alex');
+
 export default class Character implements Fighter {
   public readonly name: string;
   private _race: Race;
@@ -15,12 +18,14 @@ export default class Character implements Fighter {
   private _dexterity: number;
   private _energy: Energy;
 
-  constructor(name: string) {
-    const defaultElf = new Elf('Lúthien', 22);
-    const defaultMage = new Mage('Alex');
+  constructor(
+    name: string, 
+    elf: Race = defaultElf, 
+    archetype: Archetype = defaultMage,
+  ) {
     this.name = name;
-    this._race = defaultElf;
-    this._archetype = defaultMage;
+    this._race = elf;
+    this._archetype = archetype;
     this._maxLifePoints = this.race.maxLifePoints / 2;
     this._lifePoints = this._maxLifePoints;
     this._strength = getRandomInt(1, 10);
