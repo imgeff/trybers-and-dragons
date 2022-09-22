@@ -133,7 +133,7 @@ Agora repare que, por mais que a gente saiba o que são `Monster`, `Character`, 
 
 
     
-## Stack utilizada
+## Tecnologias utilizadas
 
 **Back-end:** Node.js, Typescript
 
