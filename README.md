@@ -1,6 +1,6 @@
 
 # Trybers and Dragons
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
 
 Trybers and Dragons é uma estrutura de jogo de interpretação de papel, mais conhecido como jogo de RPG (Role Playing Game), onde foi aplicado os conceitos aprendidos sobre SOLID e POO. 
 
